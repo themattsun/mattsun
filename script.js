@@ -1,6 +1,6 @@
 // ── Copy email on click ──
-const emailBtn  = document.getElementById('emailBtn');
-const copyHint  = document.getElementById('copyHint');
+const emailBtn = document.getElementById('emailBtn');
+const copyHint = document.getElementById('copyHint');
 
 if (emailBtn) {
   const EMAIL = 'contactmattsun@gmail.com';
@@ -8,6 +8,10 @@ if (emailBtn) {
 
   function triggerCopy() {
     navigator.clipboard.writeText(EMAIL).then(() => {
+      // Tracking GA
+      gtag('event', 'click', { event_category: 'contact', event_label: 'email_copy' });
+
+      // Animation
       emailBtn.textContent = '✓ copié !';
       emailBtn.classList.add('copied');
       if (copyHint) copyHint.classList.add('hidden');
@@ -17,7 +21,7 @@ if (emailBtn) {
         emailBtn.textContent = EMAIL;
         emailBtn.classList.remove('copied');
         if (copyHint) copyHint.classList.remove('hidden');
-      }, 2000);
+      }, 1200); // plus rapide : 1.2s au lieu de 2s
     });
   }
 
