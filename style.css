@@ -37,9 +37,8 @@
 :root {
   --font-text:    'Roc Grotesk', Arial, sans-serif;
   --font-display: 'Roc Grotesk Wide', Arial, sans-serif;
-  --yellow-center: #FFEF5C;
-  --yellow-edge:   #FFD700;
-  --bg: radial-gradient(ellipse at center, #FFFAAA 0%, #FFE500 45%, #F5C800 100%);
+  --yellow: #FFE500;
+  --bg: radial-gradient(ellipse at center, #FFFFFF 0%, #FFF9C0 30%, #FFE500 62%, #E8A800 100%);
   --black:  #111111;
   --white:  #ffffff;
   --radius: 18px;
@@ -80,7 +79,7 @@ header {
   background: var(--white);
   padding: 10px 22px;
   border-radius: 100px;
-  border: 2px solid var(--black);
+  border: 1px solid var(--black);
   transition: background 0.18s, color 0.18s, transform 0.18s;
 }
 
@@ -134,8 +133,7 @@ main {
   font-weight: 900;
   letter-spacing: 0.03em;
   border-radius: var(--radius);
-  border: 2.5px solid var(--black);
-  transition: transform 0.16s cubic-bezier(.22,1,.36,1), box-shadow 0.16s;
+  border: 1.5px solid var(--black);
   cursor: pointer;
 }
 
@@ -153,8 +151,8 @@ main {
   width: 100%;
   padding: 22px 28px;
   font-size: clamp(1.15rem, 3.5vw, 1.5rem);
-  background: var(--black);
-  color: var(--white);
+  background: var(--yellow);
+  color: var(--black);
 }
 
 .btn-row {
@@ -208,8 +206,7 @@ main {
   background: var(--white);
   padding: 20px 36px;
   border-radius: var(--radius);
-  border: 2.5px solid var(--black);
-  text-align: center;
+  border: 1.5px solid var(--black);
   cursor: pointer;
   word-break: break-all;
   transition: transform 0.16s, box-shadow 0.16s, background 0.2s, color 0.2s;
